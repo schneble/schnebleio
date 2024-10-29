@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.noscroll {
+    overscroll-behavior: none;
+    overscroll-behavior-y: none;
+    overflow: hidden;
+}
+
+@media screen and (max-width: 600px) {
+    .mobile-flow {
+        overflow: hidden;
+}
+}
