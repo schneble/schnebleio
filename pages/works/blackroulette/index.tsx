@@ -45,7 +45,7 @@ export default function BlackroulettePage() {
             </Button>
             <Button className='flex items-center mx-2 justify-center rounded-md bg-zinc-950 border border-white/50 text-left '>
               <Link
-                  href="https://marketplace.visualstudio.com/items?itemName=j-schneble.blackroulette-theme"
+                  href="https://github.com/j-schneble/blackroulette"
                   className="text-center text-white  "
               >
             <div className='flex items-center justify-center max-w-full p-2 text-center '>
