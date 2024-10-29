@@ -36,12 +36,12 @@ export default function IndexPage() {
         className="flex flex-col  mt-2 text-left cursor-default mob-width justify-between "
         >
             <div
-            className='flex border-t border-t-zinc-500/10 mt-3  items-center gap-2 pt-4 pb-1  justify-evenly'
+            className='flex border-t border-t-zinc-500/10 mt-3  items-center gap-2 pt-3 pb-4  justify-evenly'
             >
                 <MailIcon
                 className='stroke-1 brightness-25 text-zinc-600'
                 />
-            <div className="block w-full text-left">
+            <div className="block w-full pb- text-left">
                 <p className='text-base font-normal text-zinc-600'>
                     Lets connect -
                     <span className='italic font-light text-zinc-600'

@@ -33,12 +33,12 @@ interface CardxProps {
          {/* <Image
                 src={image}
                 className=' rounded-t-xl rounded-b-none p-1' /> */}
-                <div className=' h-16 bg-gradient-to-br from-zinc-800 via-zinc-900 to-zinc-800'/>
+                <div className=' h-12 bg-gradient-to-br from-zinc-800 via-zinc-900 to-zinc-800'/>
                     <div
                         className=
                         " "
                     />
-                    <div className="flex items-center justify-between py-2 px-4 ">
+                    <div className="flex items-center justify-between  px-4 ">
                         <Modaly
                             isOpen={isModalOpen}
                             onClose={closeModal}

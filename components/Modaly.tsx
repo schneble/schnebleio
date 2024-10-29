@@ -44,15 +44,15 @@ const Modaly: React.FC<ModalyProps> = ({ title, showpic, description, repoUrl })
                         base: "0",
                     }}
                     >
-                    <ModalContent className='bg-gradient-to-br from-zinc-200 via-zinc-100 to-zinc-200'>
+                    <ModalContent className='bg-gradient-to-br border-2 border-zinc-600/10 from-zinc-200 via-zinc-100 to-zinc-200'>
                     {(onClose) => (
                     <>
                     <Image
                     src={showpic}
                     className='rounded p-2' />
                     <ModalBody className='bg-slate-50 shadow'>
-                        <h2 className='antialiased mt-4 text-black font-semibold text-lg'>{title}</h2>
-                        <p className='antialiased pb-8 mt-4 border-b-2 border-zinc-700/10 text-black font-normal text-md'>{description}</p>
+                        <h2 className='antialiased text-black font-semibold text-lg'>{title}</h2>
+                        <p className='antialiased mb-2 pb-2  border-b-2 border-zinc-400/10 text-black font-light text-md'>{description}</p>
                         <div style={{  textAlign: 'center' }}>
                         </div>
                     </ModalBody>
@@ -60,7 +60,7 @@ const Modaly: React.FC<ModalyProps> = ({ title, showpic, description, repoUrl })
                     <Button className='flex ' color="danger" variant="light" onPress={onClose}>
                         Close
                     </Button>
-                    <Button color="primary" onPress={onClose}>
+                    <Button className='bg-black text-white rounded-md' onPress={onClose}>
                         <a href={repoUrl} >
                             <button className=''>
                                 In depth →
