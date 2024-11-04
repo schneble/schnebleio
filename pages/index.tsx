@@ -1,8 +1,11 @@
 import { title, subtitle } from "@/components/primitives";
 import DefaultLayout from "@/layouts/default";
 import  Connect from "@/components/Connect";
+import { Link } from "@nextui-org/link";
 import { MailIcon } from '../components/MailIcon'
 import Recents from '../pages/recents'
+
+import { GithubIcon } from "@/components/icons";
 const iconClasses = "text-md text-default-500 pointer-events-none  flex-shrink-0";
 
 export default function IndexPage() {
@@ -25,9 +28,24 @@ export default function IndexPage() {
             className="flex flex-col  text-left cursor-default mob-width justify-between ">
         </div>
         <div className="block w-full text-left">
-            <p className='text-base border-b-2 border-zinc-400/20 mt-6 mb-4 pb-2 font-normal antialiased text-zinc-600'>
+            <div className='flex mb-6 mt-8 pb-2 border-b-2 border-zinc-400/20 '>
+
+
+            <p className='text-lg pr-4 flex justify-evenly font-normal antialiased text-zinc-600'>
               Recently
             </p>
+
+            <button className='flex justify-evenly'>
+                <Link
+                className='px-1 pb-1 '
+                href="https://github.com/j-schneble"
+                >
+                <GithubIcon className=' antialiased text-zinc-500 rounded-lg  ' size={25}
+                />
+                </Link>
+            </button>
+
+            </div>
             <div className='flex w-full '>
                 <Recents />
             </div>
