@@ -22,16 +22,34 @@ export default function Recents () {
 			image: "/assets/blackblur.png",
 			cardDescription: "A dark minimal vscode theme",
 			modalDescription: "A dark minimal vscode theme",
-			repoUrl: "/works//blackroulette",
+			repoUrl: "/works/blackroulette",
 			dispUrl: "/works/blackroulette",
                showpic: "/assets/blackblur.png"
+		  },
+          {
+			title: "Forecast",
+			image: "/assets/forecast.png",
+			cardDescription: "Access current weather data for any location",
+			modalDescription: "Access current weather data for any location",
+			repoUrl: "/works/forecast",
+			dispUrl: "/works/forecase",
+               showpic: "/assets/forecast.png"
+		  },
+          {
+			title: "Selfintro",
+			image: "/assets/selfIntro.png",
+			cardDescription: "A self introducing terminal.",
+			modalDescription: "A self introducing terminal.",
+			repoUrl: "/works/selfIntro",
+			dispUrl: "/works/selfIntro",
+               showpic: "/assets/selfIntro.png"
 		  },
 	  ];
 
 
     return (
     //  <DefaultLayout>
-        <div className="grid  grid-cols-2 gap-2 md:grid-cols-2 lg:grid-cols-2">
+        <div className="grid grid-cols-2 gap-2 md:grid-cols-2 lg:grid-cols-2">
             {cards.map((card, index) => (
                     <Cardx key={index} title={card.title}
                 cardDescription={card.cardDescription}
