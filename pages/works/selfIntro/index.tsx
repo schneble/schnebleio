@@ -1,7 +1,7 @@
 
 import DefaultLayout from "@/layouts/default";
 import { Link } from "@nextui-org/link";
-import { BiLogoVisualStudio } from "react-icons/bi";
+import { HiGlobeAlt } from "react-icons/hi";
 import { GithubIcon } from "@/components/icons";
 import {Image} from "@nextui-org/react";
 import { Button  } from "@nextui-org/button";
@@ -37,7 +37,7 @@ export default function SelfintroPage() {
               >
             <div className='flex items-center justify-center max-w-full p-2 text-center '>
               <h1 className='px-2 text-lg text-zinc-900 border-l rounded-sm border-zinc-800'>
-                <BiLogoVisualStudio size={28} />
+              <HiGlobeAlt size={28} />
                 </h1>
             </div>
             </Link>
