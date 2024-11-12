@@ -14,8 +14,15 @@ export default function Recents () {
 			repoUrl: '/works/allview',
 			dispUrl: "https://google.com",
             showpic: "/assets/allview.png",
-
-
+		  },
+          {
+			title: "jsKeys",
+			image: "/assets/jskeys.png",
+			cardDescription: "My Karabiner-Elements keyboard layout.",
+			modalDescription: "My Karabiner-Elements keyboard layout.",
+			repoUrl: "/works/jskeys",
+			dispUrl: "/works/jskeys",
+            showpic: "/assets/jskeys.png"
 		  },
 		  {
 			title: "BlackRoulette",
@@ -24,25 +31,7 @@ export default function Recents () {
 			modalDescription: "A dark minimal vscode theme",
 			repoUrl: "/works/blackroulette",
 			dispUrl: "/works/blackroulette",
-               showpic: "/assets/blackblur.png"
-		  },
-          {
-			title: "Forecast",
-			image: "/assets/forecast.png",
-			cardDescription: "Access current weather data for any location",
-			modalDescription: "Access current weather data for any location",
-			repoUrl: "/works/forecast",
-			dispUrl: "/works/forecase",
-               showpic: "/assets/forecast.png"
-		  },
-          {
-			title: "Selfintro",
-			image: "/assets/selfIntro.png",
-			cardDescription: "A self introducing terminal.",
-			modalDescription: "A self introducing terminal.",
-			repoUrl: "/works/selfIntro",
-			dispUrl: "/works/selfIntro",
-               showpic: "/assets/selfIntro.png"
+            showpic: "/assets/blackblur.png"
 		  },
           {
 			title: "Kinetiq",
@@ -54,13 +43,22 @@ export default function Recents () {
                showpic: "/assets/kinetiq.png"
 		  },
           {
-			title: "jsKeys",
-			image: "/assets/jskeys.png",
-			cardDescription: "My Karabiner-Elements keyboard layout.",
-			modalDescription: "My Karabiner-Elements keyboard layout.",
-			repoUrl: "/works/jskeys",
-			dispUrl: "/works/jskeys",
-               showpic: "/assets/jskeys.png"
+			title: "Forecast",
+			image: "/assets/forecast.png",
+			cardDescription: "Access current weather data for any location",
+			modalDescription: "Access current weather data for any location",
+			repoUrl: "/works/forecast",
+			dispUrl: "/works/forecase",
+            showpic: "/assets/forecast.png"
+		  },
+          {
+			title: "Selfintro",
+			image: "/assets/selfIntro.png",
+			cardDescription: "A self introducing terminal.",
+			modalDescription: "A self introducing terminal.",
+			repoUrl: "/works/selfIntro",
+			dispUrl: "/works/selfIntro",
+            showpic: "/assets/selfIntro.png"
 		  },
 	  ];
 
