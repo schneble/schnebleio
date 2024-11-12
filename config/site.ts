@@ -3,6 +3,7 @@ export type SiteConfig = typeof siteConfig;
 export const siteConfig = {
   name: "js",
   description: "Developer",
+
   navItems: [
     {
       label: "Home",

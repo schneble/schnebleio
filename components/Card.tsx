@@ -29,16 +29,16 @@ interface CardxProps {
         <>
           <Card
            className=
-           "overflow-hidden  rounded-xl  bg-gradient-to-br from-zinc-800 via-zinc-900 to-zinc-800 transition-all hover:-translate-y-0.5 hover:shadow-xl ">
+           "overflow-hidden  rounded-lg bg-dots  transition-all hover:-translate-y-0.5 hover:shadow-xl ">
          {/* <Image
                 src={image}
                 className=' rounded-t-xl rounded-b-none p-1' /> */}
-                <div className=' h-12 bg-gradient-to-br from-zinc-800 via-zinc-900 to-zinc-800'/>
+                <div className='  '/>
                     <div
                         className=
-                        " "
+                        "h-8  "
                     />
-                    <div className="flex items-center justify-between  px-4 ">
+                    <div className="flex items-center bg-zinc-950 justify-between px-4 ">
                         <Modaly
                             isOpen={isModalOpen}
                             onClose={closeModal}

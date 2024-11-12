@@ -15,62 +15,53 @@ export default function IndexPage() {
       <div className="inline-block max-w-2xl text-center ">
         <h1 className={title({ class: " flex text-3xl mb-4 text-left" })}>Hey I&apos;m Jack.</h1>
         {/* <br /> */}
+
         <h2 className={subtitle({ class: " text-left" })}>
           I build responsive web applications that are efficient, fast, and
           accessible to all.
         </h2>
         <h2 className={subtitle({ class: " text-left" })}>
-          Utilizing Typescript frequently to boost productivity, experimenting
-          with Swift, aiming to keep a clean interface, and on a mission to
+          Utilizing Typescript frequently, aiming for a clean interface, and on a mission to
           build products developers love.
         </h2>
+
         <div
-            className="flex flex-col  text-left cursor-default mob-width justify-between ">
+        className="flex flex-col border-b border-zinc-400/20 pb-6  mt-6 text-left cursor-default mob-width justify-between "
+        >
+
+                {/* <MailIcon
+                className='stroke-1 brightness-25 mt-4 pl-1 text-zinc-600'
+                /> */}
+
+        <Connect  />
         </div>
-        <div className="block w-full text-left">
-            <div className='flex mb-6 mt-8 pb-2 border-b-2 border-zinc-400/20 '>
+        <div className="block w-full  text-left">
+            <div className='flex flex-col mb-4 mt-6  items-center justify-evenly    '>
 
 
-            <p className='text-lg pr-4 flex justify-evenly font-normal antialiased text-zinc-600'>
-              Recently
-            </p>
-
-            <button className='flex justify-evenly'>
+            <h2 className={subtitle({ class: "  flex text-lg flex-row   font-medium antialiased " })} >
+           Recent
+<button className=' mx-3 '>
                 <Link
-                className='px-1 pb-1 '
+                className='  '
                 href="https://github.com/j-schneble"
                 >
-                <GithubIcon className=' antialiased text-zinc-500 rounded-lg  ' size={25}
+                <GithubIcon className=' antialiased text-default-900 rounded-lg    ' size={24}
                 />
                 </Link>
-            </button>
+                </button>
+                </h2>
+
+
+
 
             </div>
-            <div className='flex w-full '>
+            <div className='flex w-full border-b border-zinc-400/20 pb-10'>
                 <Recents />
             </div>
         </div>
-        <div
-        className="flex flex-col  mt-2 text-left cursor-default mob-width justify-between "
-        >
-            <div
-            className='flex border-t border-t-zinc-500/10 mt-3  items-center gap-2 pt-3 pb-4  justify-evenly'
-            >
-                <MailIcon
-                className='stroke-1 brightness-25 text-zinc-600'
-                />
-            <div className="block w-full pb- text-left">
-                <p className='text-base font-normal text-zinc-600'>
-                    Lets connect -
-                    <span className='italic font-light text-zinc-600'
-                    >
-                    send me a message
-                    </span>
-                </p>
-            </div>
-        </div>
-        <Connect  />
-        </div>
+
+
         </div>
     </section>
 </DefaultLayout>

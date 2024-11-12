@@ -21,9 +21,9 @@ const Modaly: React.FC<ModalyProps> = ({ title, showpic, description, repoUrl })
     <>
               <div className=''>
                 <Button  onPress={onOpen} className='rounded-none p-0 bg-transparent' >
-                    <h2 className='flex text-medium md:text-medium sm:text-medium lg:text-medium  antialiased font-semibold text-white '>
+                    <h2 className='flex text-medium md:text-medium sm:text-medium lg:text-medium  antialiased font-medium text-zinc-300 backdrop-blur-sm '>
                         {title}
-                        <BadgeCheck className="w-4 h-4 ml-1 text-white" fill="#1c9bef" />
+                        <BadgeCheck className="w-3 h-3 ml-1 text-white" fill="#1c9bef" />
                     </h2>
                 </Button>
               </div>

@@ -44,12 +44,30 @@ export default function Recents () {
 			dispUrl: "/works/selfIntro",
                showpic: "/assets/selfIntro.png"
 		  },
+          {
+			title: "Kinetiq",
+			image: "/assets/kinetiq.png",
+			cardDescription: "A gym application.",
+			modalDescription: "A gym application.",
+			repoUrl: "/works/kinetiq",
+			dispUrl: "/works/kinetiq",
+               showpic: "/assets/kinetiq.png"
+		  },
+          {
+			title: "jsKeys",
+			image: "/assets/jskeys.png",
+			cardDescription: "My Karabiner-Elements keyboard layout.",
+			modalDescription: "My Karabiner-Elements keyboard layout.",
+			repoUrl: "/works/jskeys",
+			dispUrl: "/works/jskeys",
+               showpic: "/assets/jskeys.png"
+		  },
 	  ];
 
 
     return (
     //  <DefaultLayout>
-        <div className="grid grid-cols-2 gap-2 md:grid-cols-2 lg:grid-cols-2">
+        <div className="grid grid-cols-2 gap-2 md:grid-cols-3 lg:grid-cols-3">
             {cards.map((card, index) => (
                     <Cardx key={index} title={card.title}
                 cardDescription={card.cardDescription}

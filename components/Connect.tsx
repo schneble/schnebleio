@@ -58,8 +58,8 @@ const Connect = () => {
           type='message'
           role="textbox"
           value={message}
-          variant={'underlined'}
-          placeholder="Type your message.."
+        //   variant={'underlined'}
+          placeholder="Send a message ..."
         //   variant={"bordered"}
           labelPlacement="outside"
           onChange={event => setMessage(event.currentTarget.value)}

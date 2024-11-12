@@ -12,5 +12,19 @@
 @media screen and (max-width: 600px) {
     .mobile-flow {
         overflow: hidden;
+
 }
 }
+
+.bg-dots {
+
+    background: linear-gradient(90deg, #050505 15px, transparent 1%) center,
+    linear-gradient(#050505 15px, transparent 1%) center,
+    rgba(255, 255, 255, 0.12);
+    backdrop-filter: brightness(40%);
+  background-size: 16px 16px;
+
+  /* box-shadow: #ffffff; */
+  /* border-bottom: 1px solid    rgba(255, 255, 255, 0.075);
+  border-top: 1px solid    rgba(255, 255, 255, 0.23); */
+  }
