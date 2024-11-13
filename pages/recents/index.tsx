@@ -36,8 +36,8 @@ export default function Recents () {
           {
 			title: "Kinetiq",
 			image: "/assets/kinetiq.png",
-			cardDescription: "A gym application.",
-			modalDescription: "A gym application.",
+			cardDescription: "A modern lightweight boilerplate for front-end development.",
+			modalDescription:"A modern lightweight boilerplate for front-end development.",
 			repoUrl: "/works/kinetiq",
 			dispUrl: "/works/kinetiq",
                showpic: "/assets/kinetiq.png"
