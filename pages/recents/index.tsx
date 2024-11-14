@@ -43,6 +43,15 @@ export default function Recents () {
                showpic: "/assets/kinetiq.png"
 		  },
           {
+			title: "Go seek",
+			image: "/assets/seek.png",
+			cardDescription: "Scan documents, images, or entire directories for anything corrupted or malicious.",
+			modalDescription: "Scan documents, images, or entire directories for anything corrupted or malicious",
+			repoUrl: "/works/goSeek",
+			dispUrl: "/works/goSeek",
+            showpic: "/assets/seek.png"
+		  },
+          {
 			title: "Forecast",
 			image: "/assets/forecast.png",
 			cardDescription: "Access current weather data for any location",
