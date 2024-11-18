@@ -25,7 +25,7 @@ export default function Allview() {
                     color="primary"
                     className='bg-black text-white rounded-md border-2 border-zinc-300'
                     as={Link}
-                    href='https://github.com/j-schneble/all-View'>
+                    href='https://github.com/schneble/all-View.git'>
                         <FaGithub size={20}/>
                     </Button>
                     <Button

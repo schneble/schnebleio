@@ -12,7 +12,7 @@ export default function Recents () {
 			cardDescription: "Product oversight application",
 			modalDescription: "Product oversight system enabling real-time product tracking and management. Utilizing AWS services for secure, scalable deployment and data handling.",
 			repoUrl: '/works/allview',
-			dispUrl: "https://google.com",
+			dispUrl: "/works/allview",
             showpic: "/assets/allview.png",
 		  },
           {

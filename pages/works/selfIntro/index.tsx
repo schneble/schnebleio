@@ -44,7 +44,7 @@ export default function SelfintroPage() {
             </Button>
             <Button className='flex items-center mx-2 justify-center rounded-md bg-zinc-950 border border-white/50 text-left '>
               <Link
-                  href="https://github.com/j-schneble/self-intro"
+                  href="https://github.com/schneble/self-intro.git"
                   className="text-center text-white  "
               >
             <div className='flex items-center justify-center max-w-full p-2 text-center '>

@@ -44,7 +44,7 @@ export default function IndexPage() {
 <button className=' mx-3 '>
                 <Link
                 className='  '
-                href="https://github.com/j-schneble"
+                href="https://github.com/schneble"
                 >
                 <GithubIcon className=' antialiased text-default-900 rounded-lg    ' size={24}
                 />

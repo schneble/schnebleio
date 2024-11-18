@@ -29,7 +29,7 @@ export default function Kinetiq() {
                 <div className='flex flex-row gap-4 justify-evenly'>
                     <Button color="primary"
                         className='bg-black text-white rounded-md border-2 border-zinc-300'
-                        as={Link}href='https://github.com/j-schneble/kinetiq-vite'>
+                        as={Link}href='https://github.com/schneble/kinetiq-vite.git'>
                             <FaGithub size={20}/>
                     </Button>
                     <Button

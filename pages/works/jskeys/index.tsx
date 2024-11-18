@@ -30,7 +30,7 @@ export default function Jskeys() {
                             class: "py-1  border-zinc-500/20 border-b text-base  font-medium rounded-sm   px-2 flex items-center gap-6 " })}>
                                 <Button className='bg-zinc-100 border mb-1 flex text-center items-center rounded'>
                                     <Link
-                                    href="https://github.com/j-schneble/jsKeys">
+                                    href="https://github.com/schneble/jsKeys.git">
                                     <GithubIcon
                                         size={24}
                                         className='text-zinc-700' />
