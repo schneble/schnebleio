@@ -350,7 +350,7 @@ export const projectsData: Project[] = [
     title: "BlackRoulette",
     imageUrl: "/assets/roulette.png",
     description: "A minimal dark mode VSCode theme.",
-    fullDescription: "A self-introducing terminal.",
+    fullDescription: "A minimal dark mode VSCode theme.",
     githubLink: "https://github.com/schneble/blackroulette.git",
     liveLink:
       "https://marketplace.visualstudio.com/items?itemName=j-schneble.blackroulette-theme",
