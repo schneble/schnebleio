@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Button } from "@nextui-org/react";
+import { Button, Link } from "@nextui-org/react";
 
 import { GOSEEKGUARD_FILES } from "../config/goseekguard";
 import { GoSeekGuard } from "../types/download";
@@ -41,14 +41,14 @@ export const GoSeekGuardButtons: React.FC = () => {
       </div>
 
       <div>
-        <Button
-          className=" bg-inherit w-full mt-3 rounded-none antialased "
-          href={"https://github.com/schneble/go-seek.git"}
-        >
-          <p className="text-x-100 flex gap-2 text-sm  tracking-tighter  ">
+        <Button className=" bg-inherit w-full mt-3 rounded-none antialased ">
+          <Link
+            className="text-x-100 flex gap-2 text-sm  tracking-tighter  "
+            href={"https://github.com/schneble/go-seek.git"}
+          >
             Free and open source
             <GithubIcon className="text-x-50" size={20} />
-          </p>
+          </Link>
         </Button>
       </div>
     </div>
