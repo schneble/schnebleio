@@ -41,11 +41,11 @@ export const FileScopeButtons: React.FC = () => {
       </div>
       <Button className=" bg-inherit w-full mt-3 rounded-none  antialased ">
         <Link
-          className="text-x-100 flex gap-2 text-sm  tracking-tighter  "
+          className="text-surface50 flex gap-2 text-sm  tracking-tighter  "
           href={"https://github.com/schneble/filescope.git"}
         >
           Free and open source
-          <GithubIcon className="text-x-50" size={20} />
+          <GithubIcon className="text-surface50" size={20} />
         </Link>
       </Button>
     </div>
