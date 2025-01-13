@@ -8,23 +8,84 @@
     overscroll-behavior-y: none;
     overflow: hidden;
 }
-
 @media screen and (max-width: 600px) {
     .mobile-flow {
         overflow: hidden;
 
 }
 }
-
 .bg-dots {
-
     background: linear-gradient(90deg, #050505 15px, transparent 1%) center,
     linear-gradient(#050505 15px, transparent 1%) center,
     rgba(255, 255, 255, 0.12);
     backdrop-filter: brightness(40%);
   background-size: 16px 16px;
-
-  /* box-shadow: #ffffff; */
-  /* border-bottom: 1px solid    rgba(255, 255, 255, 0.075);
-  border-top: 1px solid    rgba(255, 255, 255, 0.23); */
   }
+  .discovery {
+    background-color: #111113;
+  }
+.discover-yt {
+    color: #B1B34A;
+}
+  .discover-yellow {
+    background-color: #3E3E23;
+    border: 1px solid #EEF360;
+  }
+.mgray {
+    color: #9FA1A3;
+}
+  .xai-bg {
+    background-color: #050505;
+  }
+  .white {
+    color:#FFFFFF;
+  }
+  .xai-bg-color {
+    color:#050505;
+  }
+  .xai-bg-border {
+    border: 1px solid #050505;
+  }
+  .xai-bgcolor {
+    color:#050505;
+  }
+  .xai-color2 {
+    color: #9FA1A3;
+  }
+  .xai-textgray {
+    color: #B7B9BA;
+  }
+  .xai-border {
+    border: 1px solid #2A2A2A
+  }
+  .xai-border2 {
+    border: 1px solid #1A1B1B
+  }
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+    /* .scrollmsg {
+        display: block;
+    }
+    @media screen and (min-width: 768px) {
+        .scrollmsg {
+            display: none;
+        }
+    } */
+
+    .noSelect {
+        -webkit-tap-highlight-color: transparent;
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
+        -khtml-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+    }
+    .noSelect:focus {
+        outline: none !important;
+    }

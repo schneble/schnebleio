@@ -15,22 +15,12 @@ export const siteConfig = {
       label: "Home",
       href: "/",
     },
-    {
-      label: "works",
-      href: "/works",
-    },
-    {
-      label: "BlackRoulette",
-      href: "/blackroulette",
-    },
-    {
-        label: "Allview",
-        href: "/allview",
-      },
   ],
   links: {
-    github: "https://github.com/j-schneble",
+    github: "https://github.com/schneble",
     brsource: "https://github.com/j-schneble/blackroulette",
-    roulette: "https://marketplace.visualstudio.com/items?itemName=j-schneble.blackroulette-theme",
+    roulette:
+      "https://marketplace.visualstudio.com/items?itemName=j-schneble.blackroulette-theme",
+    linkedin: "https://linkedin.com/in/johnaschneble",
   },
 };

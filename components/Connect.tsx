@@ -1,83 +1,95 @@
-'use client'
+"use client";
 
-import React, { useState } from 'react';
+import React, { useState } from "react";
 import { Input } from "@nextui-org/react";
-import { Button  } from "@nextui-org/button";
-import { init } from '@emailjs/browser';
-import emailjs from '@emailjs/browser';
-import useInView from 'react-cool-inview'
-import { useToast } from '@chakra-ui/react';
+import { Button } from "@nextui-org/button";
+import { init } from "@emailjs/browser";
+import emailjs from "@emailjs/browser";
+import useInView from "react-cool-inview";
+import { useToast } from "@chakra-ui/react";
 import { FaArrowRightLong } from "react-icons/fa6";
-import { MailIcon } from './MailIcon'
+
+import { MailIcon } from "./MailIcon";
 
 const Connect = () => {
-  const clearInput = () => {
-    setMessage('');
-    setIsLoading(false);
-  }
-
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const { observe, inView } = useInView({
     unobserveOnEnter: true,
   });
 
   init("5ZYR13DMdRvzV54Zy");
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const toast = useToast();
-  const [message, setMessage] = useState('');
-  const [error, setError] = useState('');
+  const [message, setMessage] = useState("");
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  const [error, setError] = useState("");
   const [isLoading, setIsLoading] = useState(false);
 
-  const handleSubmit = (e: { preventDefault: () => void; }) => {
+  const clearInput = () => {
+    setMessage("");
+    setIsLoading(false);
+  };
+
+  const handleSubmit = (e: { preventDefault: () => void }) => {
     e.preventDefault();
     setIsLoading(true);
 
-    if (message.trim() !== '') {
-      emailjs.send("service_fl3n0ru","template_h2auxrc", {
-        message: message,
-      })
-      .then((response) => {
-        console.log('Email sent successfully:', response);
-        alert('Message sent successfully!');
-      })
-      .catch((error) => {
-        console.error('Error sending email:', error);
-        alert('Failed to send message. Please try again later.');
-      });
+    if (message.trim() !== "") {
+      emailjs
+        .send("service_fl3n0ru", "template_h2auxrc", { message })
+        .then((response) => {
+          // eslint-disable-next-line no-console
+          console.log("Email sent successfully:", response);
+          alert("Message sent successfully!");
+        })
+        .catch((error) => {
+          // eslint-disable-next-line no-console
+          console.error("Error sending email:", error);
+          alert("Failed to send message. Please try again later.");
+        });
       clearInput();
     }
-  }
+  };
 
   return (
-
-      <div className="inline-block rounded-none max-w-lg text-center ">
+    <div className="inline-block max-w-xs text-left">
       <form
-      onSubmit={handleSubmit}
-      className="flex  md:flex-nowrap  rounded-none"
+        className="xai-border py-1 opacity-60 rounded-xl"
+        onSubmit={handleSubmit}
       >
         <Input
-          id='message'
-          type='message'
-          role="textbox"
-          value={message}
-        //   variant={'underlined'}
-          placeholder="Send a message ..."
-        //   variant={"bordered"}
-          labelPlacement="outside"
-          onChange={event => setMessage(event.currentTarget.value)}
           classNames={{
-            input: " rounded-none resize-y min-h-[40px] text-base", /* Ensure font size is at least 16px */
+            input: [
+              "dark:bg-midnight bg-transparent",
+              "placeholder:mgray dark:placeholder:text-white/45",
+            ],
+            inputWrapper: ["dark:bg-midnight-950 bg-midnight"],
           }}
           endContent={
             <Button
-              className='bg-inherit'
+              className="bg-transparent"
+              isLoading={isLoading}
               type="submit"
-              isLoading={isLoading}>
-              <FaArrowRightLong className="flex-shrink-0 text-xl pointer-events-none text-default-400" />
+            >
+              <FaArrowRightLong className="text-lg pointer-events-none text-white/45 dark:text-white/45 font-medium " />
             </Button>
           }
+          id="message"
+          placeholder="Email"
+          radius="sm"
+          role="textbox"
+          startContent={
+            <p className="text-white/35 dark:text-white/45 font-semibold text-base text-left inline-block">
+              <MailIcon />
+            </p>
+          }
+          type="message"
+          value={message}
+          onChange={(event) => setMessage(event.currentTarget.value)}
         />
       </form>
-      </div>
-  )
-}
+    </div>
+  );
+};
 
 export default Connect;
