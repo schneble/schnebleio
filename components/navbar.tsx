@@ -22,7 +22,7 @@ export const Navbar = () => {
         </NextLink>
       </NavbarContent>
       <NavbarContent
-        className="hidden sm:flex basis-1/5 sm:basis-full"
+        className="hidden sm:flex basis-1/5ß sm:basis-full"
         justify="end"
       >
         <NavbarItem className="hidden sm:flex" />
