@@ -4,8 +4,8 @@ import { Image, Tabs, Tab, Button, Link } from "@nextui-org/react";
 import { HiGlobeAlt } from "react-icons/hi";
 
 import { GithubIcon } from "./icons";
-import { GoSeekGuardButtons } from "./GoSeekButtons";
-import { FileScopeButtons } from "./FileScopeButtons";
+import { GoSeekGuardButtons } from "./downloadable/GoSeekButtons";
+import { FileScopeButtons } from "./downloadable/FileScopeButtons";
 
 import { projectsData } from "@/config/worksdata";
 import { Project } from "@/config/project";
@@ -138,7 +138,7 @@ const ProjectCards = () => {
   return (
     <div className="">
       {/* Main content area */}
-      <div className="bg-gradient-to-b from-surf8/20 to-surface900/20 rounded-2xl p-2 border border-surface950">
+      <div className="bg-gradient-to-b from-surf8/20 to-surface900/20 rounded-2xl p-1.5  border border-surface950">
         <div className="flex justify-evenly lg:justify-start   gap-10 mb-1 flex-row">
           <p className=" lg:pl-8 lg:ml-8 text-sm text-x400/25 font-medium ">
             <span className="text-lg mr-5">←</span> scroll{" "}
@@ -147,7 +147,7 @@ const ProjectCards = () => {
         </div>
         <Tabs
           aria-label="Project tabs"
-          className="w-72 shadow-xai-shadow border rounded-2xl mb-8  py-2 px-2 border-surf8/40  xai-bg flex flex-row justify-center"
+          className="w-72 shadow-xai-shadow border rounded-2xl   mb-8  py-2 px-2 border-surf8/40  xai-bg flex flex-row justify-center"
           classNames={{
             tabList: "gap-1  border-surf8/90  ",
             tab: "px-4 py-2.5 text-sm font-medium",

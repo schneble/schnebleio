@@ -12,6 +12,7 @@ import {
   FiMap,
 } from "react-icons/fi";
 import { RiNextjsFill, RiTailwindCssFill } from "react-icons/ri";
+import { TbBrandFramerMotion } from "react-icons/tb";
 import { FaAws, FaCss3Alt, FaNodeJs, FaPython, FaReact } from "react-icons/fa";
 import {
   SiJavascript,
@@ -27,8 +28,67 @@ import { Project } from "@/config/project";
 
 export const projectsData: Project[] = [
   {
+    title: "Terminal",
+    imageUrl: "/assets/thumb/localterm.png",
+    description:
+      "A fully interactive, browser-based terminal. Emaulates a Linux-like command-line interface (CLI) directly in the browser, providing users with an engaging and intuitive way to simulate terminal commands and file system operations. ",
+    fullDescription:
+      "A fully interactive, browser-based terminal. Emaulates a Linux-like command-line interface (CLI) directly in the browser, providing users with an engaging and intuitive way to simulate terminal commands and file system operations. ",
+    githubLink: "https://github.com/schneble/localterminal.git",
+    liveLink: "https://localterm.vercel.app",
+    id: "project1",
+    goseekFeature: false,
+    filescopeFeature: false,
+    techStack: [
+      {
+        name: "TypeScript",
+        description: "Type-safe components",
+        color: "bg-sky-500",
+        icon: SiTypescript,
+      },
+      {
+        name: "Next.js",
+        description: "Server rendering",
+        color: "bg-blue-500",
+        icon: RiNextjsFill,
+      },
+      {
+        name: "FramerMotion",
+        description: "Fluid animations",
+        color: "bg-violet-500",
+        icon: TbBrandFramerMotion,
+      },
+    ],
+    features: [
+      {
+        title: " ",
+        description: " ",
+        icon: FiFolder,
+        technicalDetails: [
+          "Various terminal commands implemented via a modular and extensible command system",
+        ],
+      },
+      {
+        title: " ",
+        description: " ",
+        icon: FiSearch,
+        technicalDetails: [
+          "Offers a mock file system with capabilities for creating, editing, and saving files",
+        ],
+      },
+      {
+        title: " ",
+        description: " ",
+        icon: FiCode,
+        technicalDetails: [
+          "Maintains a detailed log of commands executed, along with timestamps for each entry",
+        ],
+      },
+    ],
+  },
+  {
     title: "Allview",
-    imageUrl: "/assets/aview.png",
+    imageUrl: "/assets/thumb/aview.png",
     description: "Stock management system",
     fullDescription:
       "A responsive inventory control platform that streamlines stock management through real-time monitoring and automated tracking capabilities.",
@@ -107,7 +167,7 @@ export const projectsData: Project[] = [
   },
   {
     title: "GoSeek Guard",
-    imageUrl: "/assets/seekguard.png",
+    imageUrl: "/assets/thumb/seekguard.png",
     description: "On-demand virus scan",
     fullDescription:
       "Initially built as GoSeek, a basic file scanner with limited signature detection, now GoSeek Guard—a comprehensive antivirus solution with multiple layers of detection.",
@@ -162,7 +222,7 @@ export const projectsData: Project[] = [
   },
   {
     title: "Filescope",
-    imageUrl: "/assets/scopefileimg.png",
+    imageUrl: "/assets/thumb/scopefileimg.png",
     description:
       "Developed to improve comprehension of file integrity, multithreaded environments, and GUI design.",
     fullDescription:
@@ -207,15 +267,16 @@ export const projectsData: Project[] = [
       },
     ],
   },
+
   {
     title: "Kinetiq",
-    imageUrl: "/assets/showkinetiq.png",
+    imageUrl: "/assets/thumb/showkinetiq.png",
     description: "Vite front-end template",
     fullDescription:
       "Kinetiq frontend template includes a clean, modern design with interactive, reusable UI components, dynamic data rendering, and responsive layouts. Optimized for usability and scalability, Kinetiq delivers a seamless development and user experience.",
     githubLink: "https://github.com/schneble/kinetiq-vite.git",
     liveLink: "https://bd223d15.kinetiq-vite.pages.dev/",
-    id: "project2",
+    id: "project5",
     goseekFeature: false,
     filescopeFeature: false,
     techStack: [
@@ -282,13 +343,13 @@ export const projectsData: Project[] = [
   },
   {
     title: "Forecast",
-    imageUrl: "/assets/foryou.png",
+    imageUrl: "/assets/thumb/foryou.png",
     description: "Access current weather data for any location",
     fullDescription:
       "A modern weather application leveraging React and TypeScript to deliver real-time and accurate forecasts with a user-friendly interface.",
     githubLink: "https://github.com/schneble/weather-forecast-app.git",
     liveLink: "https://your-forecast.vercel.app/",
-    id: "project4",
+    id: "project6",
     goseekFeature: false,
     filescopeFeature: false,
     techStack: [
@@ -348,13 +409,13 @@ export const projectsData: Project[] = [
   },
   {
     title: "BlackRoulette",
-    imageUrl: "/assets/roulette.png",
+    imageUrl: "/assets/thumb/roulette.png",
     description: "A minimal, dark extension for Visual Studio Code.",
     fullDescription: "A minimal, dark extension for Visul Studio Code.",
     githubLink: "https://github.com/schneble/blackroulette.git",
     liveLink:
       "https://marketplace.visualstudio.com/items?itemName=j-schneble.blackroulette-theme",
-    id: "project5",
+    id: "project7",
     goseekFeature: false,
     filescopeFeature: false,
     techStack: [

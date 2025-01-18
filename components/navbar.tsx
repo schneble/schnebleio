@@ -17,8 +17,8 @@ export const Navbar = () => {
           className="font-light shadow-xai-shadow antialiased text-sm justify-evenly "
           href="/"
         >
-          <span className="text-white text-xl pr-1 ">∷</span>
-          <span className="font-light text-x400 ">schneble</span>
+          <span className="text-x400 font-light text-2xl pr-1 ">∷</span>
+          <span className="font-light text-x400/75 ">schneble</span>
         </NextLink>
       </NavbarContent>
       <NavbarContent

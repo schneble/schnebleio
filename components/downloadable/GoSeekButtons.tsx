@@ -1,11 +1,11 @@
 import { useState } from "react";
 import { Button, Link } from "@nextui-org/react";
 
-import { GOSEEKGUARD_FILES } from "../config/goseekguard";
-import { GoSeekGuard } from "../types/download";
-import { goSeekGuardFile } from "../components/utils/goseek";
+import { GOSEEKGUARD_FILES } from "../../config/goseekguard";
+import { GoSeekGuard } from "../../types/download";
+import { goSeekGuardFile } from "../utils/goseek";
+import { GithubIcon } from "../icons";
 
-import { GithubIcon } from "./icons";
 import { GoSeekGuardButton } from "./GoSeekButton";
 
 export const GoSeekGuardButtons: React.FC = () => {
