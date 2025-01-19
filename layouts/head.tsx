@@ -12,7 +12,7 @@ export const Head = () => {
       <meta content={siteConfig.description} name="description" />
       <meta
         key="viewport"
-        content="viewport-fit=cover, width=device-width, initial-scale=1.0, maximum-scale=1.0"
+        content="viewport-fit=cover, width=device-width, initial-scale=1.0, maximum-scale=2.0"
         name="viewport"
       />
       <link href="/icon.png" rel="icon" />

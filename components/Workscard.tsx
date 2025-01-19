@@ -111,7 +111,7 @@ const ProjectCards = () => {
           >
             <div className="space-y-z">
               <div className="flex items-center gap-2">
-                <div className=" rounded-lg  transition-colors">
+                <div className=" rounded-lg text-zinc-200 transition-colors">
                   <feature.icon />
                 </div>
                 <h3 className="text-zinc-200 font-medium">{feature.title}</h3>
