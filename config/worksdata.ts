@@ -29,7 +29,7 @@ import { Project } from "@/config/project";
 export const projectsData: Project[] = [
   {
     title: "Terminal",
-    imageUrl: "/assets/thumb/localterm.png",
+    imageUrl: "/assets/thumb/term.png",
     description:
       "A fully interactive, browser-based terminal. Emaulates a Linux-like command-line interface (CLI) directly in the browser, providing users with an engaging and intuitive way to simulate terminal commands and file system operations. ",
     fullDescription:
