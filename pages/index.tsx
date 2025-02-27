@@ -9,7 +9,7 @@ export default function IndexPage() {
       <section>
         <div>
           <header className="p-2">
-            <h1 className="w-full flex mb-3 lg:text-5xl text-w font-mono text-3xl mgray text-black antialiased text-left">
+            <h1 className="w-full flex mb-3 text-xl text-w font-mono  mgray text-black antialiased text-left">
               Hey, I&apos;m
               <span className="text-surface50 font-normal font-mono ml-2">
                 Jack

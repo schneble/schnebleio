@@ -22,7 +22,7 @@ export const Footer = () => {
         <p className="text-xs px-4 text-white/35">
           © {getCurrentYear()} Jack Schneble
         </p>
-        <div className="flex bg-black items-center gap-3">
+        <div className="flex bg-[##050505] items-center gap-3">
           <Button
             as={Link}
             className="bg-inherit text-xs text-white/35"

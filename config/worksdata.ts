@@ -88,6 +88,7 @@ export const projectsData: Project[] = [
   },
   {
     title: "Allview",
+    announcement: true,
     imageUrl: "/assets/thumb/aview.png",
     description: "Stock management system",
     fullDescription:

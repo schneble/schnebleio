@@ -28,6 +28,7 @@ export interface Project {
   challenges?: string[];
   githubUrl?: string;
   liveUrl?: string;
+  announcement?: boolean;
   goseekFeature?: boolean;
   filescopeFeature?: boolean;
   architectureDetails?: string;

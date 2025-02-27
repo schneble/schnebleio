@@ -27,9 +27,13 @@
 .discover-yt {
     color: #B1B34A;
 }
+.disc {
+    color: #EEF360;
+}
   .discover-yellow {
     background-color: #3E3E23;
-    border: 1px solid #EEF360;
+    border: 2px solid #EEF360;
+    border-radius: 8px;
   }
 .mgray {
     color: #9FA1A3;

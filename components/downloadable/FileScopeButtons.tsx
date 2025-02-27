@@ -4,8 +4,8 @@ import { Button, Link } from "@nextui-org/react";
 import { FILESCOPE_FILES } from "../../config/filescope";
 import { FileScope } from "../../types/download";
 import { FileScopeFile } from "../utils/filescope";
-
 import { GithubIcon } from "../icons";
+
 import { FileScopeButton } from "./FileScopeButton";
 
 export const FileScopeButtons: React.FC = () => {
