@@ -11,7 +11,7 @@ export interface TechStackItem {
 export interface FeatureDetail {
   title: string;
   description: string;
-  icon: React.ComponentType;
+  icon: React.ComponentType<{ className?: string }>;
   technicalDetails?: string[];
 }
 
