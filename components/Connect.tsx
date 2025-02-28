@@ -106,7 +106,7 @@ const Connect = () => {
             onChange={(event) => setEmail(event.currentTarget.value)}
           />
           <button
-            className="absolute right-3 top-1/2 -translate-y-1/2 text-white/45 dark:text-white/45 text-lg"
+            className="absolute right-3 top-1/2 -translate-y-1/2 text-x400/60 dark:text-x400/60 text-lg"
             disabled={isLoading}
             type="submit"
           >
