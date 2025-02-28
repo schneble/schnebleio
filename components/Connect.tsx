@@ -1,92 +1,122 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Input } from "@nextui-org/react";
-import { Button } from "@nextui-org/button";
-import { init } from "@emailjs/browser";
 import emailjs from "@emailjs/browser";
-import useInView from "react-cool-inview";
 import { useToast } from "@chakra-ui/react";
 import { FaArrowRightLong } from "react-icons/fa6";
 
 import { MailIcon } from "./MailIcon";
 
 const Connect = () => {
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  const { observe, inView } = useInView({
-    unobserveOnEnter: true,
-  });
-
-  init("5ZYR13DMdRvzV54Zy");
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const toast = useToast();
-  const [message, setMessage] = useState("");
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  const [error, setError] = useState("");
+  const [email, setEmail] = useState("");
   const [isLoading, setIsLoading] = useState(false);
 
+  useEffect(() => {
+    emailjs.init("5ZYR13DMdRvzV54Zy");
+  }, []);
+
   const clearInput = () => {
-    setMessage("");
+    setEmail("");
     setIsLoading(false);
   };
 
-  const handleSubmit = (e: { preventDefault: () => void }) => {
+  const isValidEmail = (email: string) => {
+    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+  };
+
+  const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     setIsLoading(true);
 
-    if (message.trim() !== "") {
-      emailjs
-        .send("service_fl3n0ru", "template_h2auxrc", { message })
-        .then((response) => {
-          // eslint-disable-next-line no-console
-          console.log("Email sent successfully:", response);
-          alert("Message sent successfully!");
-        })
-        .catch((error) => {
-          // eslint-disable-next-line no-console
-          console.error("Error sending email:", error);
-          alert("Failed to send message. Please try again later.");
-        });
-      clearInput();
+    if (!email.trim()) {
+      toast({
+        title: "Email required.",
+        description: "Please enter your email address.",
+        status: "error",
+        duration: 4000,
+        isClosable: true,
+      });
+      setIsLoading(false);
+
+      return;
     }
+
+    if (!isValidEmail(email)) {
+      toast({
+        title: "Invalid email format.",
+        description: "Please enter a valid email address.",
+        status: "error",
+        duration: 4000,
+        isClosable: true,
+      });
+      setIsLoading(false);
+
+      return;
+    }
+
+    emailjs
+      .send("service_fl3n0ru", "template_h2auxrc", { message: email })
+      .then(() => {
+        toast({
+          title: "Message sent.",
+          description: "Your message was sent successfully.",
+          status: "success",
+          duration: 4000,
+          isClosable: true,
+        });
+        clearInput();
+      })
+      .catch(() => {
+        toast({
+          title: "Failed to send message.",
+          description: "Something went wrong, please try again later.",
+          status: "error",
+          duration: 4000,
+          isClosable: true,
+        });
+        setIsLoading(false);
+      });
   };
 
   return (
-    <div className="inline-block max-w-xs text-left">
-      <form
-        className="xai-border py-1 opacity-60 rounded-xl"
-        onSubmit={handleSubmit}
-      >
-        <Input
-          classNames={{
-            input: [
-              "dark:bg-midnight bg-transparent",
-              "placeholder:mgray dark:placeholder:text-white/45",
-            ],
-            inputWrapper: ["dark:bg-midnight-950 bg-midnight"],
-          }}
-          endContent={
-            <Button
-              className="bg-transparent"
-              isLoading={isLoading}
-              type="submit"
-            >
-              <FaArrowRightLong className="text-lg pointer-events-none text-white/45 dark:text-white/45 font-medium " />
-            </Button>
-          }
-          id="message"
-          placeholder="Email"
-          radius="sm"
-          role="textbox"
-          startContent={
-            <p className="text-white/35 dark:text-white/45 font-semibold text-base text-left inline-block">
-              <MailIcon />
-            </p>
-          }
-          type="message"
-          value={message}
-          onChange={(event) => setMessage(event.currentTarget.value)}
-        />
+    <div className="inline-block max-w-xs  text-left">
+      <form className="xai-border rounded-lg" onSubmit={handleSubmit}>
+        <div className="  opacity-50 rounded-lg   relative">
+          <Input
+            classNames={{
+              input: [
+                "dark:bg-midnight bg-transparent",
+                "placeholder:bg-mgray dark:placeholder:text-white/45",
+              ],
+              inputWrapper: ["dark:bg-midnight-950 bg-midnight-950"],
+            }}
+            id="email"
+            placeholder="Email"
+            radius="sm"
+            role="textbox"
+            startContent={
+              <p className="text-white/35 dark:text-white/45 font-semibold text-base text-left inline-block">
+                <MailIcon />
+              </p>
+            }
+            type="email"
+            value={email}
+            onChange={(event) => setEmail(event.currentTarget.value)}
+          />
+          <button
+            className="absolute right-3 top-1/2 -translate-y-1/2 text-white/45 dark:text-white/45 text-lg"
+            disabled={isLoading}
+            type="submit"
+          >
+            {isLoading ? (
+              <span className="text-sm">...</span>
+            ) : (
+              <FaArrowRightLong />
+            )}
+          </button>
+        </div>
       </form>
     </div>
   );

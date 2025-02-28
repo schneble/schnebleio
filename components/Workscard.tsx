@@ -141,21 +141,22 @@ const ProjectCards = () => {
   return (
     <div className="">
       {/* Main content area */}
-      <div className="bg-gradient-to-b from-surf8/20 to-surface900/20 rounded-2xl  p-1.5  ">
-        <div className="flex justify-evenly lg:justify-start   gap-10 mb-1 flex-row">
-          <p className=" lg:pl-8 lg:ml-8 text-sm xl:text-transparent text-x400/50 font-medium ">
+      <div className="bg-gradient-to-b from-surf7/10 to-surf8/5 rounded-2xl  p-1.5  ">
+        <div className="flex items-center text-center justify-evenly gap-10 mt-2 mb-1 flex-row">
+          <p className="   text-sm xl:text-transparent text-x400/15 brightness-110 font-medium ">
             <span className="text-lg mr-5">←</span> scroll{" "}
             <span className="text-lg ml-5"> → </span>
           </p>
         </div>
         <Tabs
           aria-label="Project tabs"
-          className="w-72 xl:w-full xl:ml-0 ml-2 shadow-xai-shadow border rounded-2xl   mb-8  py-2 px-2 border-surf8/40  xai-bg flex flex-row justify-center"
+          className="w-80 xl:w-full xl:ml-0 mb-6 ml-2 p-1 shadow-xai-shadow mt-1 xai-bg rounded-2xl py-2.5 flex flex-row justify-evenly"
           classNames={{
-            tabList: "gap-1  border-surf8/90  ",
-            tab: "px-4 py-2.5 text-sm font-medium",
-            tabContent: "group-data-[selected=true]:text-surf2 text-x400/80",
-            cursor: "bg-surf8/60",
+            tabList: "gap-1  ",
+            tab: "px-2.5 xl:px-4 py-5 text-sm font-medium",
+            tabContent:
+              "group-data-[selected=true]:text-white/95  text-x400/80",
+            cursor: "xai-border2 focus:none bg-surf8/20",
           }}
           radius="lg"
           variant="light"

@@ -10,6 +10,11 @@ module.exports = {
   ],
   theme: {
     extend: {
+        backgroundOpacity: {
+            '10': '0.1',
+            '20': '0.2',
+            '95': '0.95',
+           },
         colors: {
             xaibg: '#000000',
             surface50: '#E0E0E0',
