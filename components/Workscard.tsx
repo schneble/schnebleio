@@ -52,9 +52,9 @@ const ProjectCards = () => {
             {project.techStack.map((tech) => (
               <div
                 key={tech.name}
-                className="flex items-center gap-1.5 bg-surface900/50 justify-center px-2 py-1.5 rounded-full border border-zinc-800/50 hover:border-zinc-700/50 transition-colors"
+                className="flex items-center text-surface400 gap-1.5 bg-surface900/50 justify-center px-2 py-1.5 rounded-full border border-zinc-800/50 hover:border-zinc-700/50 transition-colors"
               >
-                <tech.icon className="text-surface400" size={14} />
+                <tech.icon />
               </div>
             ))}
           </div>
