@@ -1,17 +1,17 @@
 import React from "react";
-import { IconType } from "react-icons";
+import { ComponentType } from "react";
 
 export interface TechStackItem {
   name: string;
   description: string;
   color: string;
-  icon: IconType;
+  icon: ComponentType<{ className?: string }>; // This ensures it can be used directly in JSX.
 }
 
 export interface FeatureDetail {
   title: string;
   description: string;
-  icon: React.ComponentType<{ className?: string }>;
+  icon: React.ComponentType;
   technicalDetails?: string[];
 }
 

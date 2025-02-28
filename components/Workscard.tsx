@@ -52,6 +52,10 @@ const ProjectCards = () => {
             {project.techStack.map((tech) => {
               const IconComponent = tech.icon;
 
+              {
+                IconComponent && <IconComponent className="h-4 w-4" />;
+              }
+
               return (
                 <div
                   key={tech.name}
