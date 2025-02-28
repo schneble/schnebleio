@@ -4,7 +4,6 @@ import React, { useState, useEffect } from "react";
 import { Input } from "@nextui-org/react";
 import emailjs from "@emailjs/browser";
 import { useToast } from "@chakra-ui/react";
-import { FaArrowRightLong } from "react-icons/fa6";
 
 import { MailIcon } from "./MailIcon";
 
@@ -106,15 +105,11 @@ const Connect = () => {
             onChange={(event) => setEmail(event.currentTarget.value)}
           />
           <button
-            className="absolute right-3 top-1/2 -translate-y-1/2 text-x400/60 dark:text-x400/60 text-lg"
+            className="absolute items-center right-3 top-1/2 pb-0.5 -translate-y-1/2 text-x400/60 dark:text-x400/60 text-xl"
             disabled={isLoading}
             type="submit"
           >
-            {isLoading ? (
-              <span className="text-sm">...</span>
-            ) : (
-              <FaArrowRightLong />
-            )}
+            {isLoading ? <span className="text-sm">...</span> : <span>→</span>}
           </button>
         </div>
       </form>
