@@ -49,14 +49,18 @@ const ProjectCards = () => {
 
           {/* Tech Stack */}
           <div className="flex flex-wrap gap-2 py-3">
-            {project.techStack.map((tech) => (
-              <div
-                key={tech.name}
-                className="flex items-center text-surface400 gap-1.5 bg-surface900/50 justify-center px-2 py-1.5 rounded-full border border-zinc-800/50 hover:border-zinc-700/50 transition-colors"
-              >
-                <tech.icon />
-              </div>
-            ))}
+            {project.techStack.map((tech) => {
+              const IconComponent = tech.icon;
+
+              return (
+                <div
+                  key={tech.name}
+                  className="flex items-center text-surface400 gap-1.5 bg-surface900/50 justify-center px-2 py-1.5 rounded-full border border-zinc-800/50 hover:border-zinc-700/50 transition-colors"
+                >
+                  {IconComponent && <IconComponent className="h-4 w-4" />}
+                </div>
+              );
+            })}
           </div>
 
           {/* Action Buttons */}
