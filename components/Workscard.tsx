@@ -97,18 +97,20 @@ const ProjectCards = () => {
   );
 
   const renderProjectFeatures = (project: Project) => (
-    <div className="mt-4 space-y-6">
+    <div className="mt-4 space-y-2">
       <div className="flex items-center justify-between">
-        <h4 className="text-x400 text-sm ml-2 font-medium">Project Features</h4>
-        <div className="h-px flex-1 bg-zinc-800/50 ml-4" />
+        <h4 className="text-x400 text-sm mb-3 mt-1 ml-2 font-medium">
+          Project Features
+        </h4>
+        <div className="px-2 mx-3 mt-2 flex-1 bg-zinc-800/50 ml-4" />
       </div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 my-1 pt-2 p-1 ">
         {project.features.map((feature, index) => (
           <motion.div
             key={index}
             animate={{ opacity: 1, y: 0 }}
-            className="group bg-surface950/40 rounded-xl p-4 hover:bg-surface950/60 transition-all duration-300 border border-surf8/20 hover:border-surf8/50"
+            className="group bg-surface950/40 rounded-xl p-4 hover:bg-surface900 border border-surface900/70 ransition-all duration-300 hover:border-surf8/50"
             initial={{ opacity: 0, y: 20 }}
             transition={{ delay: index * 0.1 }}
           >
@@ -141,22 +143,22 @@ const ProjectCards = () => {
   return (
     <div className="">
       {/* Main content area */}
-      <div className="bg-x950 px-0.5 rounded-xl ">
-        <div className="flex items-center text-center justify-evenly gap-10 mt-2 mb-1 flex-row">
-          <p className="   text-sm xl:text-transparent text-x400/15 brightness-110 font-medium ">
-            <span className="text-lg mr-5">←</span> scroll{" "}
-            <span className="text-lg ml-5"> → </span>
+      <div className="xai-border bg-x950 shadow-xai-shadow py-6  px-0.5 rounded-xl ">
+        <div className="flex justify-center items-center text-center">
+          <p className=" xl:text-transparent text-white/15 flex items-center text-center tracking-wider font-medium ">
+            {/* <span className="text-lg pr-16">←</span> scroll{" "}
+            <span className="text-lg pl-16"> → </span> */}
           </p>
         </div>
         <Tabs
           aria-label="Project tabs"
-          className="w-80 xl:w-full xl:ml-0 mb-6 ml-2 p-1 rounded-lg shadow-xai-shadow mt-1  bg-surface900 py-2.5 flex flex-row justify-evenly"
+          className="w-80 xl:w-full xl:ml-0 mb-6 ml-4 p-1 rounded-lg text-center shadow-xai-shadow  bg-white/15 py-3 flex flex-row justify-evenly"
           classNames={{
-            tabList: "gap-1  ",
-            tab: "px-2.5 xl:px-4 py-5 text-sm font-medium",
+            tabList: "gap-0.5  ",
+            tab: " py-6 text-sm tracking-tighter font-semibold",
             tabContent:
               "group-data-[selected=true]:text-white/95  text-surface600",
-            cursor: "xai-border2 focus:none xai-bg",
+            cursor: " xai-bg focus:none border-none ",
           }}
           radius="lg"
           variant="light"

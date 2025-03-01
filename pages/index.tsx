@@ -8,8 +8,8 @@ export default function IndexPage() {
     <DefaultLayout>
       <section>
         <div>
-          <header className="p-2 ">
-            <h1 className="w-full flex mt-6  text-2xl font-mono  mgray text-black antialiased text-left">
+          <header className="p-1 mx-1 ">
+            <h1 className="w-full flex mt-3 xl:text-3xl  lg:text-3xl text-2xl font-mono  mgray text-black antialiased text-left">
               Hey, I&apos;m
               <span className="text-surface50 font-normal font-mono ml-2">
                 Jack
@@ -34,7 +34,7 @@ export default function IndexPage() {
               refine my approach to deliver effective solutions.
             </h2>
           </header>
-          <div className="flex ml-2 border-b-1 border-surf8/20 pb-8 flex-col ">
+          <div className="flex ml-2 border-b-1 border-surf8/20 mt-2 pb-8 flex-col ">
             <Connect />
           </div>
           <div className="  mt-20 pt-18">

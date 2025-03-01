@@ -81,7 +81,7 @@ const Connect = () => {
 
   return (
     <div className="inline-block max-w-xs  text-left">
-      <form className="xai-border rounded-lg" onSubmit={handleSubmit}>
+      <form className="xai-border py-2 rounded-lg" onSubmit={handleSubmit}>
         <div className="  opacity-50 rounded-lg   relative">
           <Input
             classNames={{
