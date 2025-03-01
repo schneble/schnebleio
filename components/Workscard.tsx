@@ -49,26 +49,18 @@ const ProjectCards = () => {
 
           {/* Tech Stack */}
           <div className="flex flex-wrap gap-2 py-3">
-            {project.techStack.map((tech) => {
-              const IconComponent = tech.icon;
-
-              {
-                IconComponent && <IconComponent className="h-4 w-4" />;
-              }
-
-              return (
-                <div
-                  key={tech.name}
-                  className="flex items-center text-surface400 gap-1.5 bg-surface900/50 justify-center px-2 py-1.5 rounded-full border border-zinc-800/50 hover:border-zinc-700/50 transition-colors"
-                >
-                  {IconComponent && <IconComponent className="h-4 w-4" />}
-                </div>
-              );
-            })}
+            {project.techStack.map((tech) => (
+              <div
+                key={tech.name}
+                className="flex text-center justify-center items-center text-surface400 gap-1.5 bg-surface900/50  px-2 py-1.5 rounded-full border border-zinc-800/50 hover:border-zinc-700/50 transition-colors"
+              >
+                <tech.icon className="flex justify-center text-surface400" />
+              </div>
+            ))}
           </div>
 
           {/* Action Buttons */}
-          <div className="flex gap-2">
+          <div className="flex gap-4">
             {project.githubLink && (
               <Button
                 className="bg-zinc-900 noselect hover:bg-zinc-800  text-zinc-100 border border-zinc-800/50 rounded-lg "
@@ -107,7 +99,7 @@ const ProjectCards = () => {
   const renderProjectFeatures = (project: Project) => (
     <div className="mt-4 space-y-6">
       <div className="flex items-center justify-between">
-        <h4 className="text-x400 text-sm font-medium">Project Features</h4>
+        <h4 className="text-x400 text-sm ml-2 font-medium">Project Features</h4>
         <div className="h-px flex-1 bg-zinc-800/50 ml-4" />
       </div>
 
@@ -149,7 +141,7 @@ const ProjectCards = () => {
   return (
     <div className="">
       {/* Main content area */}
-      <div className="bg-gradient-to-b from-surf7/10 to-surf8/5 rounded-2xl  p-1.5  ">
+      <div className="bg-x950 px-0.5 rounded-xl ">
         <div className="flex items-center text-center justify-evenly gap-10 mt-2 mb-1 flex-row">
           <p className="   text-sm xl:text-transparent text-x400/15 brightness-110 font-medium ">
             <span className="text-lg mr-5">←</span> scroll{" "}
@@ -158,13 +150,13 @@ const ProjectCards = () => {
         </div>
         <Tabs
           aria-label="Project tabs"
-          className="w-80 xl:w-full xl:ml-0 mb-6 ml-2 p-1 shadow-xai-shadow mt-1 xai-bg rounded-2xl py-2.5 flex flex-row justify-evenly"
+          className="w-80 xl:w-full xl:ml-0 mb-6 ml-2 p-1 rounded-lg shadow-xai-shadow mt-1  bg-surface900 py-2.5 flex flex-row justify-evenly"
           classNames={{
             tabList: "gap-1  ",
             tab: "px-2.5 xl:px-4 py-5 text-sm font-medium",
             tabContent:
-              "group-data-[selected=true]:text-white/95  text-x400/80",
-            cursor: "xai-border2 focus:none bg-surf8/20",
+              "group-data-[selected=true]:text-white/95  text-surface600",
+            cursor: "xai-border2 focus:none xai-bg",
           }}
           radius="lg"
           variant="light"
