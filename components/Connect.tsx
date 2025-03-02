@@ -1,15 +1,18 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
-import { Input } from "@nextui-org/react";
 import emailjs from "@emailjs/browser";
-import { useToast } from "@chakra-ui/react";
+import { FaArrowRightLong } from "react-icons/fa6";
+import { Button } from "@nextui-org/button";
+import { Input } from "@heroui/input";
 
 import { MailIcon } from "./MailIcon";
 
 const Connect = () => {
-  const toast = useToast();
-  const [email, setEmail] = useState("");
+  //   const toast = useToast();
+  const [message, setMessage] = useState("");
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  const [error, setError] = useState("");
   const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
@@ -17,101 +20,76 @@ const Connect = () => {
   }, []);
 
   const clearInput = () => {
-    setEmail("");
+    setMessage("");
     setIsLoading(false);
   };
 
-  const isValidEmail = (email: string) => {
-    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
-  };
+  //   const isValidEmail = (email: string) => {
+  //     return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+  //   };
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     setIsLoading(true);
 
-    if (!email.trim()) {
-      toast({
-        title: "Email required.",
-        description: "Please enter your email address.",
-        status: "error",
-        duration: 4000,
-        isClosable: true,
-      });
-      setIsLoading(false);
-
-      return;
-    }
-
-    if (!isValidEmail(email)) {
-      toast({
-        title: "Invalid email format.",
-        description: "Please enter a valid email address.",
-        status: "error",
-        duration: 4000,
-        isClosable: true,
-      });
-      setIsLoading(false);
-
-      return;
-    }
-
-    emailjs
-      .send("service_fl3n0ru", "template_h2auxrc", { message: email })
-      .then(() => {
-        toast({
-          title: "Message sent.",
-          description: "Your message was sent successfully.",
-          status: "success",
-          duration: 4000,
-          isClosable: true,
+    if (message.trim() !== "") {
+      emailjs
+        .send("service_fl3n0ru", "template_h2auxrc", { message })
+        .then((response) => {
+          // eslint-disable-next-line no-console
+          console.log("Email sent successfully:", response);
+          alert("Message sent successfully!");
+        })
+        .catch((error) => {
+          // eslint-disable-next-line no-console
+          console.error("Error sending email:", error);
+          alert("Failed to send message. Please try again later.");
         });
-        clearInput();
-      })
-      .catch(() => {
-        toast({
-          title: "Failed to send message.",
-          description: "Something went wrong, please try again later.",
-          status: "error",
-          duration: 4000,
-          isClosable: true,
-        });
-        setIsLoading(false);
-      });
+      clearInput();
+    }
   };
 
   return (
     <div className="inline-block max-w-xs  text-left">
-      <form className="xai-border py-2 rounded-lg" onSubmit={handleSubmit}>
-        <div className="  opacity-50 rounded-lg   relative">
-          <Input
-            classNames={{
-              input: [
-                "dark:bg-midnight bg-transparent",
-                "placeholder:bg-mgray dark:placeholder:text-white/45",
-              ],
-              inputWrapper: ["dark:bg-midnight-950 bg-midnight-950"],
-            }}
-            id="email"
-            placeholder="Email"
-            radius="sm"
-            role="textbox"
-            startContent={
-              <p className="text-white/35 dark:text-white/45 font-semibold text-base text-left inline-block">
-                <MailIcon />
+      <form className="  py-2 rounded-lg" onSubmit={handleSubmit}>
+        <Input
+          classNames={{
+            // If you want to keep it dark with no weird boxes
+            input: [
+              "  h-16", // your custom background
+              "appearance-none", // remove default OS stuff
+              "focus:outline-none",
+              "focus:ring-0",
+              "placeholder:opacity-20 ml-2",
+            ],
+            inputWrapper: ["bg-black py-2"],
+          }}
+          endContent={
+            <Button
+              className="bg-transparent  focus:opacity-100 font-semibold opacity-15"
+              isLoading={isLoading}
+              type="submit"
+            >
+              <p className="ml-10 text-lg ">
+                {" "}
+                <FaArrowRightLong />
               </p>
-            }
-            type="email"
-            value={email}
-            onChange={(event) => setEmail(event.currentTarget.value)}
-          />
-          <button
-            className="absolute items-center right-3 top-1/2 pb-0.5 -translate-y-1/2 text-x400/60 dark:text-x400/60 text-xl"
-            disabled={isLoading}
-            type="submit"
-          >
-            {isLoading ? <span className="text-sm">...</span> : <span>→</span>}
-          </button>
-        </div>
+            </Button>
+          }
+          id="message"
+          placeholder="Enter your email"
+          radius="sm"
+          role="textbox"
+          size={"lg"}
+          startContent={
+            <p className="text-white/10 dark:text-white/45 font-semibold text-lg text-left inline-block">
+              <MailIcon />
+            </p>
+          }
+          type="message"
+          value={message}
+          onChange={(event) => setMessage(event.currentTarget.value)}
+        />
       </form>
     </div>
   );

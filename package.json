@@ -13,6 +13,9 @@
 		"@emailjs/browser": "^4.3.3",
 		"@emotion/react": "^11.14.0",
 		"@emotion/styled": "^11.14.0",
+		"@heroui/input": "^2.4.15",
+		"@heroui/system": "^2.4.11",
+		"@heroui/theme": "^2.4.11",
 		"@mui/material": "^6.3.1",
 		"@nextui-org/button": "2.0.37",
 		"@nextui-org/code": "2.0.32",
@@ -28,7 +31,7 @@
 		"@nextui-org/theme": "2.2.9",
 		"@react-aria/visually-hidden": "3.8.12",
 		"clsx": "2.1.1",
-		"framer-motion": "~11.1.1",
+		"framer-motion": "^12.4.7",
 		"heroicons": "^2.2.0",
 		"intl-messageformat": "^10.5.0",
 		"lucide-react": "^0.453.0",
@@ -61,9 +64,9 @@
 		"tailwind-variants": "0.1.20",
 		"tailwindcss": "3.4.3",
 		"typescript": "5.0.4"
-	    },
-        "resolutions": {
-            "@types/react": "17.0.2",
-            "@types/react-dom": "17.0.2"
-        }
-    }
+	},
+	"resolutions": {
+		"@types/react": "17.0.2",
+		"@types/react-dom": "17.0.2"
+	}
+}

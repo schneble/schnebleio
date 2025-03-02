@@ -22,7 +22,7 @@ const ProjectCards = () => {
           <div className=" inset-0 bg-gradient-to-t from-zinc-950 via-transparent to-transparent opacity-60" />
           <Image
             alt={project.title}
-            className="w-full object-cover xai-border shadow-xai-shadow transition-transform duration-500 hover:scale-102 opacity-90"
+            className="w-f6 object-cover xai-border shadow-xai-shadow transition-transform duration-500 hover:scale-102 opacity-90"
             src={project.imageUrl}
           />
         </div>
@@ -33,7 +33,7 @@ const ProjectCards = () => {
         {/* Header */}
         <div className="space-y-4">
           <div className="flex items-center gap-3">
-            <h3 className="text-xl font-semibold text-surface50">
+            <h3 className="text-xl mt-2 font-semibold text-surface50">
               {project.title}
             </h3>
             <span className="px-2 py-0.5 text-xs font-medium bg-surface950 text-surf7 rounded-full border border-zinc-800">
@@ -52,7 +52,9 @@ const ProjectCards = () => {
             {project.techStack.map((tech) => (
               <div
                 key={tech.name}
-                className="flex text-center justify-center items-center text-surface400 gap-1.5 bg-surface900/50  px-2 py-1.5 rounded-full border border-zinc-800/50 hover:border-zinc-700/50 transition-colors"
+                className="
+                flex text-center justify-center items-center text-surface400 gap-1.5 bg-surface900/50
+                px-2 py-1.5 rounded-full border border-zinc-800/50 hover:border-zinc-700/50 transition-colors"
               >
                 <tech.icon className="flex justify-center text-surface400" />
               </div>
@@ -97,7 +99,7 @@ const ProjectCards = () => {
   );
 
   const renderProjectFeatures = (project: Project) => (
-    <div className="mt-4 space-y-2">
+    <div className="mt-4 mx-2 space-y-2">
       <div className="flex items-center justify-between">
         <h4 className="text-x400 text-sm mb-3 mt-1 ml-2 font-medium">
           Project Features
@@ -110,7 +112,9 @@ const ProjectCards = () => {
           <motion.div
             key={index}
             animate={{ opacity: 1, y: 0 }}
-            className="group bg-surface950/40 rounded-xl p-4 hover:bg-surface900 border border-surface900/70 ransition-all duration-300 hover:border-surf8/50"
+            className="
+            group bg-surface950/40 rounded-xl p-4 hover:bg-surface900 border
+            border-surface900/70 ransition-all duration-300 hover:border-surf8/50"
             initial={{ opacity: 0, y: 20 }}
             transition={{ delay: index * 0.1 }}
           >
@@ -143,16 +147,18 @@ const ProjectCards = () => {
   return (
     <div className="">
       {/* Main content area */}
-      <div className="xai-border bg-x950 shadow-xai-shadow py-6  px-0.5 rounded-xl ">
+      <div>
         <div className="flex justify-center items-center text-center">
-          <p className=" xl:text-transparent text-white/15 flex items-center text-center tracking-wider font-medium ">
-            {/* <span className="text-lg pr-16">←</span> scroll{" "}
-            <span className="text-lg pl-16"> → </span> */}
+          <p className=" xl:text-transparent opacity-10 flex items-center text-center tracking-wider font-medium ">
+            <span className="text-lg pr-10">←</span> scroll{" "}
+            <span className="text-lg pl-10"> → </span>
           </p>
         </div>
         <Tabs
           aria-label="Project tabs"
-          className="w-80 xl:w-full xl:ml-0 mb-6 ml-4 p-1 rounded-lg text-center shadow-xai-shadow  bg-white/15 py-3 flex flex-row justify-evenly"
+          className="
+          w-80 xl:w-full lg:w-full lg:ml-0  xl:ml-0 ml-4 p-1 rounded-lg text-center shadow-xai-shadow xai-border
+          bg-surface950 py-3 flex flex-row justify-evenly"
           classNames={{
             tabList: "gap-0.5  ",
             tab: " py-6 text-sm tracking-tighter font-semibold",
@@ -170,18 +176,20 @@ const ProjectCards = () => {
         >
           {projectsData.map((project) => (
             <Tab key={project.title} title={project.title}>
-              <AnimatePresence mode="wait">
-                <motion.div
-                  key={project.title}
-                  animate={{ opacity: 1, y: 0 }}
-                  exit={{ opacity: 0, y: -10 }}
-                  initial={{ opacity: 0, y: 10 }}
-                  transition={{ duration: 0.3 }}
-                >
-                  {renderProjectOverview(project)}
-                  {renderProjectFeatures(project)}
-                </motion.div>
-              </AnimatePresence>
+              <div className="xai-border bg-x950 shadow-xai-shadow mt-3 pb-3  px-0.5 rounded-xl ">
+                <AnimatePresence mode="wait">
+                  <motion.div
+                    key={project.title}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: -10 }}
+                    initial={{ opacity: 0, y: 10 }}
+                    transition={{ duration: 0.3 }}
+                  >
+                    {renderProjectOverview(project)}
+                    {renderProjectFeatures(project)}
+                  </motion.div>
+                </AnimatePresence>
+              </div>
             </Tab>
           ))}
         </Tabs>
